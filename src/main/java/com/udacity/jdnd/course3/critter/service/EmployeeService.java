@@ -7,6 +7,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.DayOfWeek;
+import java.util.Set;
+
 @Service
 public class EmployeeService {
     @Autowired
@@ -28,5 +31,11 @@ public class EmployeeService {
         EmployeeDTO retrievedEmployeeDTO = new EmployeeDTO();
         BeanUtils.copyProperties(retrievedEmployee, retrievedEmployeeDTO);
         return retrievedEmployeeDTO;
+    }
+
+    public void setAvailability(Set<DayOfWeek> daysAvailable, long employeeId) {
+        Employee employee = employeeRepository.getOne(employeeId);
+        employee.setDaysAvailable(daysAvailable);
+        employeeRepository.save(employee);
     }
 }
