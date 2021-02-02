@@ -1,6 +1,6 @@
 package com.udacity.jdnd.course3.critter.controller;
 
-import com.udacity.jdnd.course3.critter.dataObject.ScheduleDTO;
+import com.udacity.jdnd.course3.critter.data.ScheduleDTO;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

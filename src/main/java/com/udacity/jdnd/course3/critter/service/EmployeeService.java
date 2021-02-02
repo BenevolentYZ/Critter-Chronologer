@@ -1,6 +1,6 @@
 package com.udacity.jdnd.course3.critter.service;
 
-import com.udacity.jdnd.course3.critter.dataObject.EmployeeDTO;
+import com.udacity.jdnd.course3.critter.data.EmployeeDTO;
 import com.udacity.jdnd.course3.critter.entity.Employee;
 import com.udacity.jdnd.course3.critter.repository.EmployeeRepository;
 import org.springframework.beans.BeanUtils;

@@ -1,4 +1,4 @@
-package com.udacity.jdnd.course3.critter.dataObject;
+package com.udacity.jdnd.course3.critter.data;
 
 import java.util.List;
 
