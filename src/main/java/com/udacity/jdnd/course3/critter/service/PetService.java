@@ -46,6 +46,15 @@ public class PetService {
         return petDTOs;
     }
 
+    public List<PetDTO> getPets() {
+        List<Pet> petList = petRepository.findAll();
+        List<PetDTO> petDTOs = new ArrayList<>();
+        for (Pet pet : petList) {
+            petDTOs.add(mapEntityToDTO(pet));
+        }
+        return petDTOs;
+    }
+
     private Pet mapDTOToEntity(PetDTO petDTO) {
         Pet pet = new Pet();
         BeanUtils.copyProperties(petDTO, pet);
